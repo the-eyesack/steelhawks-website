@@ -1,20 +1,26 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import { pages } from "./routes/routes";
-import NewNavigation from "./components/navigation/navigation";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import { pages } from './routes/routes';
+import Navigation from './components/Navigation';
+import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Footer from './components/Footer';
+import { motion } from 'framer-motion';
 
-import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Footer from "./components/footer/footer";
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <NewNavigation routes={pages} />
-    <RouterProvider router={createBrowserRouter(pages)} />
+    <Navigation routes={pages} />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ transition: { duration: 0.5 }, opacity: 1 }}
+    >
+      <RouterProvider router={createBrowserRouter(pages)} />
+    </motion.div>
     <Footer />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
