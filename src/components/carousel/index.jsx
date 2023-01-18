@@ -4,12 +4,6 @@ import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { sleep } from "../../helpers/time";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const mockImages = [
-  "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
-  "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSxpC7bPQEqkSriarinEXba8FJWlzhc0yK3CZQYuis&s",
-];
-
 const Carousel = (props) => {
   const controls = useAnimationControls();
   const [imageIndex, setImageIndex] = useState(0);
@@ -20,7 +14,7 @@ const Carousel = (props) => {
         className="mr-4"
         onClick={async () => {
           controls.start({
-            x: 200,
+            x: 50,
             opacity: 0,
             transition: {
               duration: 0.2,
@@ -28,10 +22,10 @@ const Carousel = (props) => {
           });
           await sleep(200);
           setImageIndex(
-            imageIndex - 1 < 0 ? mockImages.length - 1 : imageIndex - 1
+            imageIndex - 1 < 0 ? props.images.length - 1 : imageIndex - 1
           );
           controls.start({
-            x: -200,
+            x: -50,
           });
           await sleep(100);
           controls.start({
@@ -92,7 +86,7 @@ const Carousel = (props) => {
         className="ml-4"
         onClick={async () => {
           controls.start({
-            x: -200,
+            x: -50,
             opacity: 0,
             transition: {
               duration: 0.2,
@@ -100,10 +94,10 @@ const Carousel = (props) => {
           });
           await sleep(200);
           setImageIndex(
-            imageIndex + 1 >= mockImages.length ? 0 : imageIndex + 1
+            imageIndex + 1 >= props.images.length ? 0 : imageIndex + 1
           );
           controls.start({
-            x: 200,
+            x: 50,
           });
           await sleep(100);
           controls.start({
