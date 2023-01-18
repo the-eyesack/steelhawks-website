@@ -1,6 +1,6 @@
 import React from 'react';
 import { robotData } from './data';
-import MediaChooser from '../../helpers/MediaChooser';
+import MediaChooser from '../../helpers/mediaChooser';
 import { motion } from 'framer-motion';
 
 const RobotPage = () => {

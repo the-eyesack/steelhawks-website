@@ -24,6 +24,12 @@ export const mentorList = [
     fileName: 'stern',
   },
   {
+    name: 'Micheal Quach',
+    title: 'Coach',
+    bio: 'help',
+    fileName: 'quach',
+  },
+  {
     name: 'John Tsai',
     title: 'Coach',
     bio: 'Mr. Tsai is a coach for the Steel Hawks.',
@@ -42,9 +48,9 @@ export const mentorList = [
     fileName: 'weijian',
   },
   {
-    name: 'Kevin Goetzger & Kenneth Leuci',
+    name: 'Kevin Goetzger',
     title: 'Mentor',
-    bio: 'Kevin and Kenneth are mentors for the Steel Hawks. We are grateful for their work in creating the practice field that we use for Open Field Weekend.',
-    fileName: 'kevinken',
+    bio: 'Kevin is a mentor for the Steel Hawks. We are grateful for his work in creating the practice field yearly that we use for testing and Open Field Weekend.',
+    fileName: 'kevin',
   },
 ];

@@ -1,18 +1,19 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import MediaChooser from '../../helpers/MediaChooser';
-import { news } from './data';
+import { motion } from "framer-motion";
+import React from "react";
+import MediaChooser from "../../helpers/mediaChooser";
+import { news } from "./data";
 
 const HomePage = () => {
   return (
-    <section className='p-10'>
+    <section className="">
       <div>
+        <img src="/logo.svg" alt="Steel Hawks" className="md:w-1/2 m-auto" />
+
         <MediaChooser
-          title='The Steel Hawks'
-          type='carousel'
-          images={['home1', 'home2', 'home3']}
-          location='home'
-          size='LARGE'
+          type="carousel"
+          images={["home1", "home2", "home3"]}
+          location="home"
+          size="LARGE"
         />
       </div>
 
@@ -21,7 +22,7 @@ const HomePage = () => {
           (season, i) =>
             season.year === new Date().getFullYear() - 1 && (
               <div key={i}>
-                <h1 className='text-[3em] mt-2 md:mt-2 md:text-[5em] text-center mb-2'>
+                <h1 className="text-[3em] mt-2 md:mt-2 md:text-[5em] text-center mb-2">
                   {season.year} Season Recap
                 </h1>
                 <div>
@@ -39,26 +40,27 @@ const HomePage = () => {
                       }}
                       viewport={{ once: true }}
                     >
-                      <h2 className='text-2xl md:text-4xl mb-2 overflow-hidden text-center'>
+                      <h2 className="text-2xl md:text-4xl mb-2 overflow-hidden text-center">
                         {event.name}
                       </h2>
-                      <div className='flex justify-center'>
-                        <img
-                          className='max-h-full md:rounded-3xl'
-                          alt={event.name + 'pic'}
-                          src={event.image}
+                      <div className="flex justify-center">
+                        <MediaChooser
+                          type={event.type}
+                          images={event.fileNames}
+                          video={event.video}
+                          location={"2022events/" + event.fileLocation}
                         />
                       </div>
-                      <p className='flex justify-center'>{event.text}</p>
+                      <p className="flex justify-center">{event.text}</p>
                     </motion.div>
                   ))}
                 </div>
               </div>
-            ),
+            )
         )}
       </div>
 
-      <p className='pb-4 text-secondary'>
+      <p className="pb-4 text-secondary">
         Thank you to our sponsors, parents, school communities, and volunteers
         who made this season possible!
       </p>
