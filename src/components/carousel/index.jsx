@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { sleep } from "../../helpers/time";
@@ -11,7 +11,7 @@ const Carousel = (props) => {
   return (
     <div className="flex justify-center items-center w-full">
       <button
-        className="mr-4"
+        className="md:mr-4 mr-2"
         onClick={async () => {
           controls.start({
             x: 50,
@@ -35,15 +35,13 @@ const Carousel = (props) => {
           });
         }}
       >
-        <FontAwesomeIcon icon={solid("chevron-left")} className="w-10 h-10" />
+        <FontAwesomeIcon
+          icon={solid("chevron-left")}
+          size="4xl"
+          className="w-10 h-10"
+        />
       </button>
-      <div
-        className={`${
-          props.size === "LARGE"
-            ? "sm:h-[300px] w-[1000px] lg:h-[500px] md:h-[400px] h-[200px]"
-            : "h-[200px] w-[600px] md:h-[300px]"
-        }`}
-      >
+      <div>
         <picture>
           <source
             srcSet={
@@ -76,14 +74,14 @@ const Carousel = (props) => {
             type="image/jpg"
           />
           <motion.img
-            className="w-full h-full object-contain"
+            className="w-full rounded-md object-contain"
             animate={controls}
             alt="Home Image"
           />
         </picture>
       </div>
       <button
-        className="ml-4"
+        className="md:ml-4 ml-2"
         onClick={async () => {
           controls.start({
             x: -50,

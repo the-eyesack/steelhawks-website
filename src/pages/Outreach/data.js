@@ -1,7 +1,8 @@
 export const outreachData = [
   {
     name: 'Project SHIFT',
-    fileNames: [],
+    fileNames: ['shift'],
+    fileLocation: 'shift',
     description:
       'An ongoing initiative to inspire new FIRST teams in our area. Started in 2022, this project consists of travelling to local elementary schools, teaching them the basics of STEM. A section of this program is also been dedicated to assisting local FLL teams.',
     type: 'img',

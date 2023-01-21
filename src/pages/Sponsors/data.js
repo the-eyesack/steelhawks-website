@@ -52,6 +52,7 @@ export const sponsorList = [
   {
     name: 'The Mu Family',
     fileName: 'mufamily',
+    style: 'p-2 aspect-square bg-white md:h-80 md:max-h-[540px]',
   },
   {
     name: 'Bloomberg',

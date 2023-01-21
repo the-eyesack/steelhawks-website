@@ -67,13 +67,19 @@ const Navigation = (props) => {
                 animate={{ y: 0, opacity: 1, transition: { duration: 0.3 } }}
               >
                 <li>
-                  <a href="/mentors">Mentors</a>
+                  <a className="nav-a" href="/mentors">
+                    Mentors
+                  </a>
                 </li>
                 <li>
-                  <a href="/leadership">Leadership</a>
+                  <a className="nav-a" href="/leadership">
+                    Leadership
+                  </a>
                 </li>
                 <li>
-                  <a href="/subteams">Subteams</a>
+                  <a className="nav-a" href="/subteams">
+                    Subteams
+                  </a>
                 </li>
               </motion.ul>
             )}
@@ -83,7 +89,9 @@ const Navigation = (props) => {
           (page, i) =>
             doNotDisplay.indexOf(page.name) === -1 && (
               <li className="navButton" key={i}>
-                <a href={page.path}>{page.name}</a>
+                <a className="nav-a" href={page.path}>
+                  {page.name}
+                </a>
               </li>
             )
         )}
@@ -127,13 +135,15 @@ const Navigation = (props) => {
                   className="flex justify-center mb-4 relative navButton"
                   key={i}
                 >
-                  <a href={page.path}>{page.name}</a>
+                  <a className="nav-a" href={page.path}>
+                    {page.name}
+                  </a>
                 </li>
               )
           )}
           <div className="flex justify-center"></div>
-          <p className="text-white absolute top-[97%] left-2 bg-transparent text-xs">
-            made with love by hand {`<3`}
+          <p className="hover:text-white text-[#151515] absolute top-[97%] left-2 bg-transparent text-xs">
+            STEEL! HAWKS!
           </p>
         </ul>
       </div>

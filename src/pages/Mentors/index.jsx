@@ -5,7 +5,7 @@ const MentorPage = () => {
   return (
     <div>
       <h1 className="pageTitle p-0">Mentors</h1>
-      <section className="grid grid-cols-1 md:grid-cols-2 m-4">
+      <section className="grid grid-cols-1 md:grid-cols-2 px-4">
         {mentorList.map((mentor, i) => (
           <div className="mb-20 px-4" key={i}>
             <h2 className="overflow-hidden">{mentor.name}</h2>
@@ -24,7 +24,10 @@ const MentorPage = () => {
                   srcSet={"/media/mentors/jpg/" + mentor.fileName + ".jpg"}
                   type="image/jpg"
                 />
-                <img className="max-w-[500px] rounded-md" alt={mentor.name} />
+                <img
+                  className="max-w-[500px] w-full rounded-md"
+                  alt={mentor.name}
+                />
               </picture>
             </div>
           </div>

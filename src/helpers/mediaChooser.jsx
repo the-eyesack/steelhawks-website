@@ -17,7 +17,10 @@ const MediaChooser = (props) => {
           srcSet={"media/" + props.location + "/jpg/" + props.images + ".jpg"}
           type="image/jpg"
         />
-        <img className="rounded-[25px] px-2" alt="" />
+        <img
+          className="rounded-md w-[100vw] max-w-[277px] md:max-w-[600px] "
+          alt=""
+        />
       </picture>
     );
   } else if (props.type === "vid")

@@ -12,10 +12,10 @@ const Footer = () => {
     >
       <div className="grid sm:grid-cols-3 grid-cols-1 border-t-2 px-10 md:px-4 py-2 gap-4 text-center">
         <div className="flex flex-col mt-2 items-center">
-          <span className="uppercase text-3xl font-bold mb-4">
+          <span className="uppercase text-2xl md:text-3xl font-bold mb-4">
             Stay Connnected
           </span>
-          <span className="mb-4">
+          <span className="md:px-10 mb-4">
             Stay connected with our team by following our various social media
             platforms!
           </span>
@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col mt-2">
-          <span className="uppercase text-3xl font-bold mb-4">
+          <span className="uppercase text-2xl md:text-3xl font-bold mb-4">
             FRC 2601 Steel Hawks
           </span>
           <span className="mb-4">
@@ -72,7 +72,7 @@ const Footer = () => {
             empowerment.
           </span>
         </div>
-        <div className="flex flex-col mt-2">
+        <div className="hidden md:flex flex-col mt-2">
           <span className="uppercase text-3xl font-bold mb-4">
             Navigate Back
           </span>
@@ -104,7 +104,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className="mx-24" />
+      <hr className="md:block mx-24" />
       <p className="mt-4 mb-10">
         Townsend Harris High School · 149-11 Melbourne Ave, Queens, NY 11367 ·
         ©2023

@@ -5,7 +5,7 @@ import { news } from "./data";
 
 const HomePage = () => {
   return (
-    <section className="">
+    <section className="px-4">
       <div>
         <img src="/logo.svg" alt="Steel Hawks" className="md:w-1/2 m-auto" />
 
@@ -13,7 +13,6 @@ const HomePage = () => {
           type="carousel"
           images={["home1", "home2", "home3"]}
           location="home"
-          size="LARGE"
         />
       </div>
 
