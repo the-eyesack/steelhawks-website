@@ -70,6 +70,15 @@ export const sponsorList = [
     fileName: 'nasa',
     url: 'https://www.nasa.gov/',
   },
+  {
+    name: 'Formosa System',
+    fileName: 'formosa',
+    style: 'w-max-[500px]'
+  },
+  {
+    name: 'Ber Yuh Yang, M.D.',
+    fileName: 'beryuhyang',
+  },
 ];
 
 export const sponsorLevels = [

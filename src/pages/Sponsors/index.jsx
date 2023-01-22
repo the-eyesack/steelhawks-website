@@ -16,7 +16,7 @@ const SponsorPage = () => {
     };
   }, []);
   return (
-    <div className="px-10 pb-10 md:pt-10">
+    <div className="px-10 pb-10">
       <h1 className="pageTitle mb-2">Sponsors</h1>
       <h2 className="mb-10 md:mb-20 text-2xl md:text-3xl md:px-24">
         Thank you sponsors! We are eternally grateful for your support!

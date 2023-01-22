@@ -15,13 +15,18 @@ const HomePage = () => {
           location="home"
         />
       </div>
-
+      <div className="mb-10">
+        <h1 className="pageTitle text-[3em] mt-10 mb-4">
+          THE STEEL HAWKS ARE CHARGED UP!
+        </h1>
+        <p>We'll see you at Long Island 2 and New York Tech Valley!</p>
+      </div>
       <div>
         {news.map(
           (season, i) =>
             season.year === new Date().getFullYear() - 1 && (
               <div key={i}>
-                <h1 className="text-[3em] mt-2 md:mt-2 md:text-[5em] text-center mb-2">
+                <h1 className="pageTitle text-[3em] m-4">
                   {season.year} Season Recap
                 </h1>
                 <div>
