@@ -98,7 +98,7 @@ const Navigation = (props) => {
       </ul>
 
       {/*mobile nav*/}
-      <div className='xl:hidden flex justify-center align-middle z-30 mt-10 md:mt-0 lg:w-0'>
+      <div className='xl:hidden flex justify-center align-middle z-30 mt-10 md:mt-0 xl:w-0'>
         <button
           className='z-30 m-2 fixed right-[5%] top-0'
           onClick={() => setToggleNav(!toggleNav)}
@@ -110,8 +110,8 @@ const Navigation = (props) => {
           />
         </button>
         <ul
-          className={` z-20 ease-in-out duration-[400ms] ${
-            toggleNav ? 'top-0 overflow-hidden inline' : 'top-[-280%]'
+          className={`z-20 ease-in-out duration-[400ms] ${
+            toggleNav ? 'top-0 right-0 overflow-hidden inline' : 'top-[-280%]'
           } fixed w-screen h-screen`}
         >
           <li className='flex justify-center'>
