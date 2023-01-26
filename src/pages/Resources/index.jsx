@@ -3,7 +3,7 @@ import { resourcesData } from './data';
 
 function ResourcesPage() {
   return (
-    <div className='grid grid-cols-3 p-10 gap-y-10'>
+    <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 p-10 gap-y-10 gap-x-4'>
       {resourcesData.map((section) => (
         <div>
           <h1 className='text-4xl'>{section.title}</h1>

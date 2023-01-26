@@ -35,7 +35,7 @@ const Navigation = (props) => {
   return (
     <div>
       {/*desktop nav*/}
-      <ul className='py-4 px-10 mb-0 text-lg justify-between uppercase items-center hidden lg:flex align-middle h-auto'>
+      <ul className='py-4 px-10 mb-0 text-lg justify-between xl:flex uppercase items-center hidden align-middle h-auto'>
         <li>
           <a href='/'>
             <img
@@ -98,7 +98,7 @@ const Navigation = (props) => {
       </ul>
 
       {/*mobile nav*/}
-      <div className='lg:hidden flex justify-center align-middle z-30 mt-10 md:mt-0 lg:w-0'>
+      <div className='xl:hidden flex justify-center align-middle z-30 mt-10 md:mt-0 lg:w-0'>
         <button
           className='z-30 m-2 fixed right-[5%] top-0'
           onClick={() => setToggleNav(!toggleNav)}
