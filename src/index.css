@@ -16,7 +16,7 @@
     @apply text-lg md:text-xl px-2 md:px-4 text-center;
   }
   a {
-    @apply text-[#eb413d] hover:text-[#EF6F6C]
+    @apply text-[#eb413d] hover:text-[#EF6F6C];
   }
 }
 
@@ -38,7 +38,7 @@
     @apply bg-inherit font-['Roboto'] leading-tight text-xl font-bold my-px uppercase;
   }
   .nav-a {
-    @apply text-white hover:text-[#bdbdbd]
+    @apply text-white hover:text-[#bdbdbd];
   }
 
   /*    swiper*/

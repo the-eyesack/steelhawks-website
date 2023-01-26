@@ -8,6 +8,7 @@ import RobotPage from '../pages/Robots';
 import OutreachPage from '../pages/Outreach';
 import SteelbucksPage from '../pages/Steelbucks';
 import ContactPage from '../pages/Contact';
+import ResourcesPage from '../pages/Resources';
 
 export const pages = [
   {
@@ -59,5 +60,10 @@ export const pages = [
     path: '/steelbucks',
     name: 'Steelbucks',
     element: <SteelbucksPage />,
+  },
+  {
+    path: '/resources',
+    name: 'Resources',
+    element: <ResourcesPage />,
   },
 ];

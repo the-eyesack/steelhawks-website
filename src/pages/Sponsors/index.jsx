@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { sponsorList, sponsorLevels } from "./data";
-import { motion } from "framer-motion";
+import React, { useEffect } from 'react';
+import { sponsorList, sponsorLevels } from './data';
+import { motion } from 'framer-motion';
 
 const SponsorPage = () => {
   useEffect(() => {
-    const script = document.createElement("script");
+    const script = document.createElement('script');
 
-    script.src = "https://use.typekit.net/foobar.js";
+    script.src = 'https://use.typekit.net/foobar.js';
     script.async = true;
 
     document.body.appendChild(script);
@@ -16,15 +16,15 @@ const SponsorPage = () => {
     };
   }, []);
   return (
-    <div className="px-10 pb-10">
-      <h1 className="pageTitle mb-2">Sponsors</h1>
-      <h2 className="mb-10 md:mb-20 text-2xl md:text-3xl md:px-24">
+    <div className='px-10 pb-10'>
+      <h1 className='pageTitle mb-2'>Sponsors</h1>
+      <h2 className='mb-10 md:mb-20 text-2xl md:text-3xl md:px-24'>
         Thank you sponsors! We are eternally grateful for your support!
       </h2>
-      <section className="grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 px-1 md:px-2 place-content-center">
+      <section className='grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 px-1 md:px-2 place-content-center'>
         {sponsorList.map((sponsor, i) => (
           <motion.div
-            className="overflow-hidden"
+            className='overflow-hidden'
             key={i}
             initial={{ x: -300, opacity: 0 }}
             whileInView={{
@@ -34,29 +34,29 @@ const SponsorPage = () => {
             }}
             viewport={{ once: true }}
           >
-            <h2 className="text-base mb-0 text-center">{sponsor.name}</h2>
-            <div className="overflow-y-hidden h-full flex justify-center items-center pb-10">
+            <h2 className='text-base mb-0 text-center'>{sponsor.name}</h2>
+            <div className='overflow-y-hidden h-full flex justify-center items-center pb-10'>
               <a href={sponsor.url}>
                 <picture>
                   <source
                     srcSet={
-                      "/media/sponsors/avif/" + sponsor.fileName + ".avif"
+                      '/media/sponsors/avif/' + sponsor.fileName + '.avif'
                     }
-                    type="image/avif"
+                    type='image/avif'
                   />
                   <source
                     srcSet={
-                      "/media/sponsors/webp/" + sponsor.fileName + ".webp"
+                      '/media/sponsors/webp/' + sponsor.fileName + '.webp'
                     }
-                    type="image/webp"
+                    type='image/webp'
                   />
                   <source
-                    srcSet={"/media/sponsors/png/" + sponsor.fileName + ".png"}
-                    type="image/png"
+                    srcSet={'/media/sponsors/png/' + sponsor.fileName + '.png'}
+                    type='image/png'
                   />
                   <img
                     className={
-                      "max-w-[420px] max-h-[420px] aspect-auto md:p-2 w-full rounded-md " +
+                      'max-w-[420px] max-h-[420px] aspect-auto md:p-2 w-full rounded-md ' +
                       sponsor.style
                     }
                     alt={sponsor.name}
@@ -68,12 +68,12 @@ const SponsorPage = () => {
         ))}
       </section>
       <motion.section
-        className=" md:mb-10"
+        className=' md:mb-10'
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 0.3 } }}
       >
-        <div className="md:px-20">
-          <h1 className="pageTitle mb-2 text-3xl md:text-5xl">
+        <div className='md:px-20'>
+          <h1 className='pageTitle mb-2 text-3xl md:text-5xl'>
             INTERESTED IN SPONSORING?
           </h1>
           <p>
@@ -87,30 +87,30 @@ const SponsorPage = () => {
           </p>
         </div>
         <section>
-          <h2 className=" md:text-3xl text-2xl underline pt-4 md:pt-10">
+          <h2 className=' md:text-3xl text-2xl underline pt-4 md:pt-10'>
             Sponsorship Degrees
           </h2>
           {sponsorLevels.map((level, i) => (
-            <div className="md:mb-10 pb-0" key={i}>
-              <div className="flex justify-center">
-                <div className="pt-4 md:pt-0">
-                  <h2 className="text-2xl inline mr-2 text-center">
+            <div className='md:mb-10 pb-0' key={i}>
+              <div className='flex justify-center'>
+                <div className='pt-4 md:pt-0'>
+                  <h2 className='text-2xl inline mr-2 text-center'>
                     {level.name}
                   </h2>
-                  <h3 className="align-baseline inline">{level.donation}</h3>
+                  <h3 className='align-baseline inline'>{level.donation}</h3>
                 </div>
               </div>
               {level.description.map((point, i) => (
-                <div className="text-center" key={i}>
-                  <li className="m-0">{point}</li>
+                <div className='text-center' key={i}>
+                  <li className='m-0'>{point}</li>
                 </div>
               ))}
             </div>
           ))}
         </section>
       </motion.section>
-      <p className="pt-8 md:pt-0">
-        Or, contribute to our <a href="https://gofund.me/34a3dfff">GoFundMe</a>.
+      <p className='pt-8 md:pt-0'>
+        Or, contribute to our <a href='https://gofund.me/34a3dfff'>GoFundMe</a>.
         <br /> Donations of any amount are most appreciated!
       </p>
     </div>
