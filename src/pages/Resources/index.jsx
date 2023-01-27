@@ -1,34 +1,29 @@
-import React from 'react';
-import { resourcesData } from './data';
+import React from "react";
+import { resourceData } from "./data";
+import Contact from "./contact";
 
 function ResourcesPage() {
   return (
-    <div className='px-10 pb-10'>
-      <h1 className='pageTitle'>Resources</h1>
-      <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-10 gap-x-4'>
-        {resourcesData.map((section) => (
-          <div>
-            <h1 className='text-4xl'>{section.title}</h1>
-            {section.topics.map((topic) => (
-              <div>
-                <li className='text-2xl mt-2 ml-6'>{topic.title}</li>
-                {topic.resources.map((resources) => (
-                  <li className='ml-12'>
-                    <a
-                      className='hover:underline duration-300'
-                      href={resources.link}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      {resources.title}
-                    </a>
-                  </li>
+    <div className="snap-y snap-mandatory px-10 pb-10">
+      <section className="snap-always snap-start h-[100vh]">
+        <h1 className="pageTitle">Resources</h1>
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-10 gap-x-4">
+          {resourceData.map((event) => (
+            <div className="h-fit">
+              <h2 className="text-left text-4xl mb-0">{event.event}</h2>
+              <h3 className="uppercase">{event.note}</h3>
+              <ol>
+                {event.links.map((links) => (
+                  <a className="block text-2xl py-1" href={links.link}>
+                    {links.title}
+                  </a>
                 ))}
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
+              </ol>
+            </div>
+          ))}
+        </div>
+      </section>
+      <Contact />
     </div>
   );
 }

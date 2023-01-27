@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 const ContactPage = () => {
   return (
-    <div>
-      <h1 className="pageTitle">Contact</h1>
+    <div className="snap-always snap-center h-[100vh]">
+      <h1 className="pageTitle">Contact Us!</h1>
       <section className="flex justify-center">
         <div>
           <a
